@@ -1,0 +1,48 @@
+/* ==========================================================================
+   #ALIGN
+   ========================================================================== */
+
+/**
+ * Utility classes for text alignment
+ */
+
+
+.u-align-left {
+  text-align: left;
+}
+
+.u-align-center {
+  text-align: center;
+}
+
+.u-align-right {
+  text-align: right;
+}
+
+
+
+
+
+@if (variable-exists(mq-breakpoints)) {
+
+  @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+
+    @include mq($from: $inuit-bp-name) {
+
+      .u-align-right#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        text-align: right;
+      }
+
+      .u-align-center#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        text-align: center;
+      }
+
+      .u-align-left#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,117 @@
+/* ==========================================================================
+   #SKIN
+   ========================================================================== */
+
+/**
+ * Backgrounds
+ */
+
+.u-bg-white {
+  background: white;
+  color: black;
+}
+
+.u-bg-purple {
+  background: $color-purple;
+  color: white;
+}
+
+.u-bg-hero {
+  background-image:
+    linear-gradient(
+      90deg, 
+      rgba($color-purple,.75),
+      rgba($color-pink-dark,.75)
+      
+    ),
+    url('../images/backgrounds/me-happy.jpg');
+  background-size: cover;
+  background-position: bottom right;
+}
+
+.u-bg-purple-code {
+  background-image: 
+    linear-gradient(45deg, 
+      rgba($color-indigo-dark,.2),
+      rgba($color-indigo-dark,.2)
+    ),
+    linear-gradient(45deg, 
+      rgba($color-purple,.925),
+      rgba($color-purple,.925)
+    ),
+    url('../images/backgrounds/code-alt-2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.u-bg-purple-chuck {
+  background-image: 
+    linear-gradient(45deg, 
+      rgba($color-indigo-dark,.2),
+      rgba($color-indigo-dark,.2)
+    ),
+    linear-gradient(45deg, 
+      rgba($color-purple,.9),
+      rgba($color-purple,.9)
+    ),
+    url('../images/backgrounds/chuck.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+/**
+ * Text Colors
+ */
+
+.u-text-light {
+  color: white;
+}
+
+.u-text-grey {
+  color: #555;
+}
+
+.u-text-grey-light {
+  color: #aaa;
+}
+
+.u-text-royal {
+  color: $color-royal;
+}
+
+.u-text-royal-light {
+  color: $color-royal-light;
+}
+
+.u-text-royal-dark {
+  color: $color-royal-dark;
+}
+
+.u-text-purple {
+  color: $color-purple;
+}
+
+.u-text-purple-light {
+  color: $color-purple-light;
+}
+
+.u-text-purple-dark {
+  color: $color-purple-dark;
+}
+
+.u-text-indigo {
+  color: $color-indigo;
+}
+
+.u-text-indigo-light {
+  color: $color-indigo-light;
+}
+
+.u-text-indigo-dark {
+  color: $color-indigo-dark;
+}
+
+.u-text-pink-dark {
+  color: $color-pink-dark;
+}

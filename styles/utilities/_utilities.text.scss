@@ -1,0 +1,18 @@
+/* ==========================================================================
+   #SKIN
+   ========================================================================== */
+
+.u-text-accent {
+  font-family: $accent-font;
+  letter-spacing: .0125em;
+}
+.u-text-accent-alt {
+  font-family: $accent-font-alt;
+  font-weight: normal;
+  //letter-spacing: .025em;
+}
+.u-text-accent-alt-bold {
+  font-family: $accent-font-alt;
+  font-weight: 500;
+  letter-spacing: .025em;
+}

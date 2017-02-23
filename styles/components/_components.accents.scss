@@ -1,0 +1,48 @@
+/* ==========================================================================
+   #ACCENTS
+   ========================================================================== */
+
+/**
+ * Accents for text blocks
+ */
+
+.c-accent {
+  line-height: inuit-rem($global-spacing-unit-small);
+
+  &:after {
+    content:'\A ';
+    display: inline-block;
+    width: inuit-rem($global-spacing-unit * 2);
+    height: inuit-rem(2px);
+    vertical-align: bottom;
+    background: currentColor;
+    opacity: .2;
+  }
+  
+}
+
+
+
+/* Variants
+   ====================================================================== */
+
+.c-accent--large {
+  line-height: inuit-rem($global-spacing-unit);
+
+  &:after {
+    width: inuit-rem($global-spacing-unit * 2.5);
+    height: inuit-rem(3px);
+    opacity: .2;
+  }
+}
+
+.c-accent--huge {
+  line-height: inherit;
+
+  &:after {
+    width: inuit-rem($global-spacing-unit * 3);
+    height: inuit-rem(4px);
+    opacity: .4;
+    vertical-align: middle;
+  }
+}

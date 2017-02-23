@@ -1,0 +1,19 @@
+/* ==========================================================================
+   #HRS
+   ========================================================================== */
+
+hr {
+  display: block;
+  height: $global-spacing-unit-tiny;
+  margin: $global-spacing-unit 0;
+  border: none;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: currentColor;
+    opacity: .15;
+  }
+
+}

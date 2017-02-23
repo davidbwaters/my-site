@@ -1,0 +1,67 @@
+/* ==========================================================================
+   #MOUSE-SCROLLS
+   ========================================================================== */
+
+$mouse-scroll-height:                        35px  !default;
+$mouse-scroll-opacity:                          1  !default;
+$mouse-scroll-border-color:                 white  !default;
+$mouse-scroll-border-width:                   2px  !default;
+$mouse-scroll-wheel-width:                    3px  !default;
+$mouse-scroll-wheel-height:                   4px  !default;
+$mouse-scroll-wheel-color:                  white  !default;
+$mouse-scroll-wheel-speed:                    1.5s  !default;
+$mouse-scroll-wheel-count:               infinite  !default;
+
+
+@keyframes mouse-scroll-down {
+  0%   { 
+    margin-top: 30%; 
+    opacity: 1; 
+  }
+  95% { 
+    margin-top: 80%; 
+    opacity: 0; 
+  }
+  100% { 
+    margin-top: 30%; 
+    opacity: 0; 
+  }
+}
+
+.c-mouse-scroll {
+  position: absolute;
+  bottom: inuit-rem($global-spacing-unit-large);
+  width: 100%;
+}
+
+.c-mouse-scroll__mouse {
+  position:relative;
+  display:block;
+  width: inuit-rem($mouse-scroll-height * .6);
+  height: inuit-rem($mouse-scroll-height);
+  margin: 0 auto;  
+  border: 
+    solid 
+    inuit-rem($mouse-scroll-border-width)
+    $mouse-scroll-border-color;
+  border-radius: 
+    inuit-rem($mouse-scroll-height);
+  opacity: $mouse-scroll-opacity;
+}
+
+.c-mouse-scroll__mouse .c-mouse-scroll__wheel {
+  display: block;
+  width: 
+    inuit-rem($mouse-scroll-wheel-width);
+  height: 
+    inuit-rem($mouse-scroll-wheel-height);
+  margin: 15% auto auto auto;
+  background: $mouse-scroll-wheel-color;
+  border-radius: 50%;
+  animation: mouse-scroll-down $mouse-scroll-wheel-speed;
+  animation-iteration-count: $mouse-scroll-wheel-count;
+  animation-timing-function: ease;
+}
+
+
+

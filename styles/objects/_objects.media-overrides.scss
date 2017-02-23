@@ -1,0 +1,106 @@
+/* ==========================================================================
+   #MEDIA
+   ========================================================================== */
+
+  .o-media__img {
+    margin-right: 
+      inuit-rem($inuit-global-spacing-unit);
+  }
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.o-media--tiny {
+
+  > .o-media__img {
+    margin-right: 
+      inuit-rem($inuit-global-spacing-unit-tiny);
+  }
+
+  &.o-media--reverse {
+
+    > .o-media__img {
+      margin-left:  
+        inuit-rem($inuit-global-spacing-unit-tiny);
+    }
+
+  }
+
+}
+
+
+.o-media--small {
+
+  > .o-media__img {
+    margin-right: 
+      inuit-rem($inuit-global-spacing-unit-small);
+  }
+
+  &.o-media--reverse {
+
+    > .o-media__img {
+      margin-left:  
+        inuit-rem($inuit-global-spacing-unit-small);
+    }
+
+  }
+
+}
+
+
+.o-media--large {
+
+  > .o-media__img {
+    margin-right: 
+      inuit-rem($inuit-global-spacing-unit-large);
+  }
+
+  &.o-media--reverse {
+
+    > .o-media__img {
+      margin-left:  
+        inuit-rem($inuit-global-spacing-unit-large);
+    }
+
+  }
+
+}
+
+
+.o-media--huge {
+
+  > .o-media__img {
+    margin-right: 
+      inuit-rem($inuit-global-spacing-unit-huge);
+  }
+
+  &.o-media--reverse {
+
+    > .o-media__img {
+      margin-left:  
+        inuit-rem($inuit-global-spacing-unit-huge);
+    }
+
+  }
+
+}
+
+
+
+
+
+/* Reversed media objects
+   ========================================================================== */
+
+.o-media--reverse {
+
+  > .o-media__img {
+    margin-left: 
+      inuit-rem($inuit-global-spacing-unit);
+  }
+
+}

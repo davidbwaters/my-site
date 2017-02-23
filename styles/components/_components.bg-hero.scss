@@ -1,0 +1,83 @@
+/* ==========================================================================
+   #BG-HERO
+   ========================================================================== */
+
+$bg-hero-img: '../images/backgrounds/me-happy.jpg';
+
+@keyframes bg-hero {
+  50% {
+    background-color: $color-rust;
+  }
+}
+@keyframes bg-hero-after {
+  50% {
+    //opacity: .3;
+  }
+  //90% {background-position: 100% 0%;}
+  100% {
+    background-position: 100% 0%;
+    //filter: blur(1rem);
+  }
+}
+
+.c-bg-hero {
+  position: relative;
+  overflow: hidden;
+  //background-image: url($bg-hero-img);
+  background-image: 
+    linear-gradient(135deg, rgba($color-purple,1), rgba($color-royal-light,0));
+  background-size: cover;
+  background-position: top right;
+  background-color: $color-pink-dark;
+  //animation-name: bg-hero;
+  
+  &,
+  &:before,
+  &:after {
+    width: 100vw;
+    height: 100vh;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    //background-blend-mode: soft-light;
+  }
+  
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: '';
+  }
+  
+  &:before {
+    //background-image: linear-gradient(90deg, rgba($color-indigo,.9), rgba($color-pink-dark,.9));
+    background-image: url($bg-hero-img);
+    background-size: cover;
+    background-position: bottom right;
+    opacity: .5;
+    //animation-name: before;
+  }
+  
+  &:after {
+    animation-name: bg-hero-after;
+    background-image: 
+      linear-gradient(
+        120deg, 
+        $color-royal-light,
+        $color-pink-dark,
+        $color-indigo-light
+        //$color-rust
+        //$color-pink-dark
+      );
+    background-size: 
+        300% 100%,
+        cover;
+    background-position: 
+        0% 0%,
+        bottom right;
+    opacity: .6;
+  }
+}

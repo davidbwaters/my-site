@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #PACK-OVERRIDES
+   ========================================================================== */
+
+.o-pack--tiny {
+  border-spacing: 
+    inuit-rem($inuit-global-spacing-unit-tiny);
+}
+
+.o-pack--small {
+  border-spacing: 
+    inuit-rem($inuit-global-spacing-unit-small);
+}
+
+.o-pack--large {
+  border-spacing: 
+    inuit-rem($inuit-global-spacing-unit-large);
+}
+
+.o-pack--huge {
+  border-spacing: 
+    inuit-rem($inuit-global-spacing-unit-huge);
+}

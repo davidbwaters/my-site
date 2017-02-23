@@ -1,0 +1,105 @@
+/* ==========================================================================
+   #BURGER
+   ========================================================================== */
+
+/**
+ * A menu button with toggle states one that inherits color value. Designed 
+ * to be performant and large enough to meet recommended sizes for touch 
+ * devices.
+ */
+
+// Settings
+$burger-height: 20px !default;
+$burger-width: $burger-height * 1.5 !default;
+$burger-padding: 8px 3px !default;
+$burger-bar-thickness: 3px !default; // best with multiples of 2
+$burger-speed: $global-transition !default;
+$burger-bar-color: currentColor !default;
+$burger-alternate-animation: false !default;
+
+
+.c-burger {
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  width: $burger-width;
+  height: $burger-height;
+  padding: $burger-padding;
+  line-height: $burger-height;
+  color: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+  $burger-offset: ( $burger-height / 2 ) - ( $burger-bar-thickness / 2 );
+
+  .c-burger__bars {
+    position: relative;
+    top: $burger-offset;
+    border-bottom: solid $burger-bar-thickness $burger-bar-color;
+
+    &,
+    &:before,
+    &:after {
+      transition: transform $burger-speed;
+      width: $burger-width;
+      height: 0;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      border-bottom: solid $burger-bar-thickness $burger-bar-color;
+    }
+
+    &:before {
+      transform: translateY(-$burger-offset);
+    }
+
+    &:after {
+      transform: translateY($burger-offset);
+    }
+
+  }
+
+// Fix for button element toggles
+button.c-burger > .c-burger__bars {
+  top: 0;
+}
+
+.c-navbar.is-active .c-burger,
+.is-active > .c-burger,
+.c-burger.is-active {
+  
+  .c-burger__bars {
+    transform: rotate( 135deg );
+    border-bottom: 
+      solid $burger-bar-thickness transparent;
+    
+    &:before {
+      transform: translateY( 0 )
+    }
+  
+    &:after {
+      transform:
+        translateY( 0 );
+        
+        @if ($burger-alternate-animation != true) {
+          transform: rotate( 90deg );
+        }
+      
+        @else {
+          transform: rotate( -90deg );
+        }
+    }
+  
+  }
+  
+}

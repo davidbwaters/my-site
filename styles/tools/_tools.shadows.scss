@@ -1,0 +1,19 @@
+///* ==========================================================================
+//   #SHADOWS
+//   ========================================================================== */
+
+///**
+// * Shadow values adapted from Material Design shadows from Polymer
+// */
+
+@mixin box-shadow-primary($color: black) {
+  box-shadow: 0 inuit-rem(2px) inuit-rem(18px) rgba($color, 0.2);
+}
+
+@mixin box-shadow-primary-light($color: black) {
+  box-shadow: 0 inuit-rem(2px) inuit-rem(18px) rgba($color, 0.1);
+}
+
+@mixin box-shadow-primary-dark($color: black) {
+  box-shadow: 0 inuit-rem(2px) inuit-rem(18px) rgba($color, 0.4);
+}

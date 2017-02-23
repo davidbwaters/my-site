@@ -1,0 +1,99 @@
+/* ==========================================================================
+   #SLANTS
+   ========================================================================== */
+
+// Settings
+$slant-height: inuit-rem($global-spacing-unit-huge);
+$slant-padding: inuit-rem($global-spacing-unit-large);
+
+
+.c-slant {
+  background-color: white;
+
+  &:before, 
+  &:after {
+    content: '';
+    display: block;
+  }
+  
+  overflow: hidden;
+}
+
+.c-slant--short-right { 
+  padding-top: ($slant-padding + $slant-height);
+  padding-bottom: ($slant-padding + $slant-height);
+  clip-path: polygon(
+    0 0,
+    100% $slant-height,
+    100% calc(100% - #{$slant-height}),
+    0 100%
+  );
+}
+
+.c-slant--short-left {
+  padding-top: ($slant-padding + $slant-height);
+  padding-bottom: ($slant-padding + $slant-height);
+  clip-path: polygon(
+    0 $slant-height, 
+    100% 0,
+    100% 100%,
+    0 calc(100% - #{$slant-height})
+  );
+}
+
+.c-slant--bottom-short-left {
+  padding-top: $slant-padding;
+  padding-bottom: ($slant-padding + $slant-height);
+  clip-path: polygon(
+    0 0, 
+    100% 0,
+    100% 100%,
+    0 calc(100% - #{$slant-height})
+  );
+}
+
+.c-slant--bottom-short-right {
+  padding-top: $slant-padding;
+  padding-bottom: ($slant-padding + $slant-height);
+  clip-path: polygon(
+    0 0, 
+    100% 0,
+    100% calc(100% - #{$slant-height}),
+    0 100%
+  );
+}
+
+.c-slant--top-short-left {
+  padding-top: ($slant-padding + $slant-height);
+  padding-bottom: $slant-padding;
+  clip-path: polygon(
+    0 $slant-height, 
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.c-slant--top-short-right {
+  padding-top: ($slant-padding + $slant-height);
+  padding-bottom: $slant-padding;
+  clip-path: polygon(
+    0 0, 
+    100% $slant-height,
+    100% 100%,
+    0 100%
+  );
+}
+
+.c-slant--spacing-none {
+  padding: 0;
+}
+
+.c-slant--offset-top {
+  margin-top: -($slant-height);
+}
+
+.c-slant--gradient-lt-top-short-left {
+  background: url('../images/backgrounds/angle-grad-3.png') no-repeat white;
+  background-size: 100% ($slant-height * 4);
+}

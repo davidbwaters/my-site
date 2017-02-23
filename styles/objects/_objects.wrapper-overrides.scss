@@ -1,0 +1,49 @@
+/* ==========================================================================
+   #WRAPPER-OVERRIDES
+   ========================================================================== */
+
+.o-wrapper {
+  padding-right: 
+    inuit-rem($inuit-global-spacing-unit);
+  padding-left:  
+    inuit-rem($inuit-global-spacing-unit);
+
+  @include mq( $from: tablet) {
+    padding-left: 
+      inuit-rem($global-spacing-unit-large);
+    padding-right: 
+      inuit-rem($global-spacing-unit-large);
+  }
+}
+
+
+/* Size variants.
+   ========================================================================== */
+
+.o-wrapper--tiny {
+  padding-right: 
+    inuit-rem($inuit-global-spacing-unit-tiny);
+  padding-left:
+    inuit-rem($inuit-global-spacing-unit-tiny);
+}
+
+.o-wrapper--small {
+  padding-right: 
+    inuit-rem($inuit-global-spacing-unit-small);
+  padding-left:  
+    inuit-rem($inuit-global-spacing-unit-small);
+}
+
+.o-wrapper--large {
+  padding-right: 
+    inuit-rem($inuit-global-spacing-unit-large);
+  padding-left:  
+    inuit-rem($inuit-global-spacing-unit-large);
+}
+
+.o-wrapper--huge {
+  padding-right: 
+    inuit-rem($inuit-global-spacing-unit-huge);
+  padding-left:  
+    inuit-rem($inuit-global-spacing-unit-huge);
+}

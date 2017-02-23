@@ -1,0 +1,22 @@
+///* ========================================================================
+//   #INUIT
+//   ======================================================================== */
+
+// Inuit settings
+
+// Core
+$inuit-global-font-size: 16px;
+$inuit-global-line-height: 24px;
+
+// Change delimeters so Pug will behave
+$inuit-widths-delimiter: '-' ;
+$inuit-widths-breakpoint-separator: '-at-';
+
+// Heading font sizes
+$inuit-font-size-h1: 36px;
+
+// Width fractions to generate 
+$inuit-fractions: 12;
+
+// Generate push/pull classes
+$inuit-offsets: true;

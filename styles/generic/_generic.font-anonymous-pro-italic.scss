@@ -1,0 +1,19 @@
+/* ==========================================================================
+   #FONT-ANONYMOUS-PRO-BOLD
+   ========================================================================== */
+
+// Settings
+$font-path: '../fonts/' !default;
+
+
+@font-face {
+	font-family: 'Anonymous Pro';
+	src: url('#{$font-path}anonymouspro-italic.eot');
+	src: url('#{$font-path}anonymouspro-italic.eot?#iefix') format('embedded-opentype'),
+	     url('#{$font-path}anonymouspro-italic.woff2') format('woff2'),
+	     url('#{$font-path}anonymouspro-italic.woff') format('woff'),
+	     url('#{$font-path}anonymouspro-italic.ttf') format('truetype'),
+	     url('#{$font-path}anonymouspro-italic.svg#anonymouspro-italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}

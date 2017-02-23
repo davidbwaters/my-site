@@ -1,0 +1,19 @@
+/* ==========================================================================
+   #FONT-NEXA-BOLD
+   ========================================================================== */
+
+// Settings
+$font-path: '../fonts/' !default;
+
+
+@font-face {
+	font-family: 'Nexa';
+	src: url('#{$font-path}nexa-bold.eot');
+	src: url('#{$font-path}nexa-bold.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path}nexa-bold.woff2') format('woff2'),
+		url('#{$font-path}nexa-bold.woff') format('woff'),
+		url('#{$font-path}nexa-bold.ttf') format('truetype'),
+		url('#{$font-path}nexa-bold.svg#nexa-bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}

@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #SCROLL-TARGET
+   ========================================================================== */
+
+//$scroll-target-blur: .2rem;
+$scroll-target-translate: 2rem;
+
+
+.c-scroll-target {
+  position: relative;
+  z-index: 10;
+  perspective: inuit-rem(1200px);
+  perspective-origin:  50% 80%;
+}
+
+.c-scroll-target__content {
+  position: relative;
+  z-index: 2;
+  transition: all 1s;
+}
+
+.c-scroll-target--fade {
+
+  .c-scroll-target__content {
+    opacity: 0;
+    transform: translateY($scroll-target-translate)  translateZ(inuit-rem(-120px));
+    //filter: blur($scroll-target-blur);
+  }
+
+  &.is-active .c-scroll-target__content {
+    transform: translateY(0rem);
+    opacity: 1;
+    //filter: blur(0rem);
+  }
+}
+
+.c-scroll-target--fade-left .c-scroll-target__content {
+  transform: translateY($scroll-target-translate)  translateZ(inuit-rem(-120px)) rotateY(15deg);
+    //filter: blur($scroll-target-blur);
+}
+
+.c-scroll-target--fade-right .c-scroll-target__content {
+  transform: translateY($scroll-target-translate)  translateZ(inuit-rem(-120px)) rotateY(-15deg);
+    //filter: blur($scroll-target-blur);
+}
+
+
+.c-scroll-target--fade-reverse {
+
+  .c-scroll-target__content {
+    opacity: 1;
+    transform: translateY(0rem);
+    //filter: blur(0rem);
+  }
+
+  &.is-active .c-scroll-target__content {
+    transform: translateY(-$scroll-target-translate) translateZ(inuit-rem(-120px));// rotateY(-15deg);
+    opacity: 0;
+    //filter: blur($scroll-target-blur);
+  }
+
+}

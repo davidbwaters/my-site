@@ -1,0 +1,76 @@
+/* ==========================================================================
+   #FOOTERS
+   ========================================================================== */
+
+$footer-height: inuit-rem(96px) !default;
+
+.c-footer {
+  padding-top: inuit-rem($global-spacing-unit-huge);
+  padding-bottom: inuit-rem($global-spacing-unit);
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: $color-purple;
+  transition: all $global-transition;
+
+  &:after {
+    position: absolute;
+    bottom: inuit-rem(0px);
+    content: '';
+    width: 100%;
+    height: inuit-rem(4px);
+    background: 
+      linear-gradient(
+        90deg, rgba($color-purple,1), 
+        rgba($color-rust,1),
+        rgba($color-purple-light,1)
+      );
+  }
+
+  &.is-blurred {
+    filter: blur(0.5rem);
+  }
+
+
+
+  /*
+  &:before{
+    content: '';
+    position: absolute;
+    z-index:  0;
+    top: -20%;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    @include box-shadow-primary-dark;
+    //height: 200%;
+    //clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100% );
+    background-color: $color-purple;
+  }*/
+}
+
+.c-footer__brand {
+  margin-bottom: inuit-rem($global-spacing-unit);
+  
+  > * {
+    width: auto;
+    height: 100%;
+    max-height: inuit-rem(24px);
+    fill: currentColor;
+  }
+
+  @include mq($from: tablet) {
+    text-align: left;
+  }
+
+}
+
+.c-footer__content {
+  position: relative ;
+  z-index: 1;
+
+  //@include box-shadow-primary-dark;
+  //background-color: $color-purple;
+}

@@ -1,0 +1,100 @@
+/* ==========================================================================
+   #FLAG-OVERRIDES
+   ========================================================================== */
+
+  .o-flag__img {
+    padding-right: 
+      inuit-rem($inuit-global-spacing-unit);
+  }
+
+
+/* Size variants.
+   ========================================================================== */
+
+.o-flag--tiny {
+
+  > .o-flag__img {
+    padding-right: $inuit-global-spacing-unit-tiny;
+  }
+
+  &.o-flag--reverse {
+
+    > .o-flag__img {
+      padding-left: 
+        inuit-rem($inuit-global-spacing-unit-tiny);
+    }
+
+  }
+
+}
+
+.o-flag--small {
+
+  > .o-flag__img {
+    padding-right: 
+      inuit-rem($inuit-global-spacing-unit-small);
+  }
+
+  &.o-flag--reverse {
+
+    > .o-flag__img {
+      padding-right: 0;
+      padding-left: 
+        inuit-rem($inuit-global-spacing-unit-small);
+    }
+
+  }
+
+}
+
+.o-flag--large {
+
+  > .o-flag__img {
+    padding-right: 
+      inuit-rem($inuit-global-spacing-unit-large);
+  }
+
+  &.o-flag--reverse {
+
+    > .o-flag__img {
+      padding-left: 
+        inuit-rem($inuit-global-spacing-unit-large);
+    }
+
+  }
+
+}
+
+.o-flag--huge {
+
+  > .o-flag__img {
+    padding-right: 
+      inuit-rem($inuit-global-spacing-unit-huge);
+  }
+
+  &.o-flag--reverse {
+
+    > .o-flag__img {
+      padding-left: 
+        inuit-rem($inuit-global-spacing-unit-huge);
+    }
+
+  }
+
+}
+
+
+
+
+
+/* Reversed flag.
+   ========================================================================== */
+
+.o-flag--reverse {
+  > .o-flag__img {
+    padding-left: 
+      inuit-rem($inuit-global-spacing-unit);
+  }
+
+}
+

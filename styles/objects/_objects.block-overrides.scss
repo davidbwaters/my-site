@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #BLOCK-OVERRIDES
+   ========================================================================== */
+
+  .o-block__img {
+    margin-bottom: 
+      inuit-rem($inuit-global-spacing-unit);
+
+
+    /* Size variants.
+       ====================================================================== */
+
+    .o-block--tiny > & {
+      margin-bottom: 
+        inuit-rem($inuit-global-spacing-unit-tiny);
+    }
+
+    .o-block--small > & {
+      margin-bottom: 
+        inuit-rem($inuit-global-spacing-unit-small);
+    }
+
+    .o-block--large > & {
+      margin-bottom: 
+        inuit-rem($inuit-global-spacing-unit-large);
+    }
+
+    .o-block--huge > & {
+      margin-bottom: 
+        inuit-rem($inuit-global-spacing-unit-huge);
+    }
+
+  }
