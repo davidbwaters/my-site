@@ -45,7 +45,7 @@
     /* Utilities */
 
     .u-dark-mode {
-      background: black;
+      background: linear-gradient(80deg, black, #333);
       color: white;
     }
 
@@ -73,50 +73,65 @@
       margin: auto;
       max-width: var(--primary-max-width);
     }
+
+    /* Components */
+
+    .c-hr-rainbow::after {
+      border-radius: 10px;
+      background: linear-gradient(70deg, #0ebeff, #ffdd40, #ae63e4, #47cf73);
+      content: "";
+      display: block;
+      height: 3px;
+    }
   </style>
 
 </head>
 
 <body>
 
-  <main class='o-aligner o-aligner--fill u-dark-mode'>
-    <section class='o-aligner__item u-spacing-1'>
+  <main class='u-dark-mode'>
+    <section class='o-aligner o-aligner--fill '>
+      <div class='o-aligner__item u-spacing-1'>
+        <div class="u-align-center">
+          <img width="40px" height="32px" src="logo.png" />
+        </div>
+        <h1>Sauce.</h1>
+        <p>
+          I am a frontend web designer available for hire anywhere in the world. I specialize in minimalistic
+          functional digital interface design. <strong> I provide digital outlet to express a shared vision
+            creatively and reach a target demographic.</strong>
+        </p>
+        <br>
+        <hr class="c-hr-rainbow">
+        <h2>Drip.</h2>
 
-      <div class="u-align-center">
-        <img width="40px" height="32px" src="logo.png" />
+        <ul>
+          <li>Web Design ( HTML, CSS, JS, ++ )</li>
+          <li>Graphic Design ( Figma, Affinity, Sketch, Adobe CS*, ++ )</li>
+          <li>Modern Javascript ( Node.js, ES*+, ++ )</li>
+          <li>Availability ( Pandemic Q2, ++ )</li>
+        </ul>
+        <br>
+
+        <hr class="c-hr-rainbow">
+        <h2> Plug.</h2>
+        <p>
+          David B. Waters ( mrdavidbwaters@gmail.com )<br>
+          843.620.1588 ( @dbwatersdesigns )
+
+        </p>
+        <br>
+        <hr class="c-hr-rainbow">
       </div>
-      <h1>Sauce.</h1>
-      <p>
-        I am a frontend web designer available for hire anywhere in the world. I specialize in minimalistic
-        functional digital interface design. <strong> I provide digital outlet to express a shared vision
-          creatively and reach a target demographic.</strong>
-      </p>
-      <br />
-      <hr>
-      </hr>
-      <h2>Drip.</h2>
 
-      <ul>
-        <li>Web Design ( HTML, CSS, JS, ++ )</li>
-        <li>Graphic Design ( Figma, Affinity, Sketch, Adobe CS*, ++ )</li>
-        <li>Modern Javascript ( Node.js, ES*+, ++ )</li>
-        <li>Availability ( Pandemic Q2, ++ )</li>
-      </ul>
-      <br />
 
-      <hr>
-      </hr>
-      <h2> Plug.</h2>
-      <p>
-        David B. Waters ( mrdavidbwaters@gmail.com )<br />
-        843.620.1588 ( @dbwatersdesigns )
-      </p>
+    </section>
+    <footer class="u-spacing-1 u-align-center">
 
-      <section>
+      <small>David B. Waters. 2020. All rights reserved.</small>
+    </footer>
   </main>
-  <footer>
-    <small>David B. Waters. 2020. All rights reserved.</small>
-  </footer>
+
 </body>
 
 </html>
