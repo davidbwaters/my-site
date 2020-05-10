@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js" lang="eng">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <!--  <link rel="apple-touch-icon" href="icon.png"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+  <style>
+    /* Settings */
+
+    :root {
+      --primary-font-family: 'Jost';
+      --primary-font-weight: 400;
+      --primary-max-width: 1080px;
+      --spacing-unit: 1rem;
+    }
+
+    /* Common */
+
+    * {
+      font-family: var(--primary-font-family), 'Helvetica', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: inherit;
+    }
+
+    /* Utilities */
+
+    .u-dark-mode {
+      background: linear-gradient(0deg, black, #222);
+      color: white;
+    }
+
+    .u-spacing-1 {
+      display: inline-block;
+      padding: calc(var(--spacing-unit) * 4);
+    }
+
+    .u-width-fill {
+      width: 100%;
+    }
+
+    .u-align-center {
+      text-align: center;
+    }
+
+
+    /* Objects */
+
+    .o-aligner {
+      align-items: center;
+      display: flex;
+    }
+
+    .o-aligner--fill {
+      min-height: 100vh;
+    }
+
+    .o-aligner__item {
+      margin: auto;
+      max-width: var(--primary-max-width);
+    }
+
+    /* Components */
+
+    .c-hr-rainbow::after {
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0ebeff, #ffdd40, #ae63e4, #47cf73);
+      content: "";
+      display: block;
+      height: 3px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main class='u-dark-mode'>
+    <section class='o-aligner o-aligner--fill '>
+      <div class='o-aligner__item u-spacing-1'>
+        <div class="u-align-center">
+          <img width="40px" height="32px" src="logo.png" />
+        </div>
+        <h1>Sauce.</h1>
+        <p>
+          I am a frontend web designer available with a focus on minimalistic
+          UI design. <strong> I streamline the relationship between producers
+            and consumers.
+          </strong>
+        </p>
+        <br>
+        <hr class="c-hr-rainbow">
+        <h2>Drip.</h2>
+
+        <ul>
+          <li>Web Design ( HTML, CSS, JS, ++ )</li>
+          <li>Graphic Design ( Figma, Affinity, Sketch, Adobe*, ++ )</li>
+          <li>Modern Javascript ( Node.js, ES*+, ++ )</li>
+          <li>Availability ( Pandemic Q2, ++ )</li>
+        </ul>
+        <br>
+
+        <hr class="c-hr-rainbow">
+        <h2> Plug.</h2>
+        <p>
+          David B. Waters ( mrdavidbwaters@gmail.com )<br>
+          843.620.1588 ( @dbwatersdesigns )
+
+        </p>
+        <br>
+        <hr class="c-hr-rainbow">
+        <footer>
+          <br>
+          <small>David B. Waters 2020. All rights reserved.</small>
+        </footer>
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+</body>
+
+</html>
