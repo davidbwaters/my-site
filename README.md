@@ -1,1 +1,0 @@
-# davidbwaters.github.io
