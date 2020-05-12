@@ -1,0 +1,30 @@
+/* ======================================================
+   #HEADER
+   ====================================================== */
+
+$header-max-width: $global-max-width;
+$header-padding-y: $spacing-unit !default;
+$header-padding-x: $spacing-unit !default;
+$header-transition: $global-transition !default;
+
+.c-header {
+  display: block;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  padding: 
+    $header-padding-y 
+    $header-padding-x;
+  transition: $button-transition;
+}
+
+.c-header__inner {
+  max-width: $header-max-width;
+}
+
+.c-header__logo {
+  width: auto;
+  height: 36px;
+}

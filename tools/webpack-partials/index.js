@@ -3,6 +3,9 @@
 //   ==================================================== */
 
 const partials = {
+  configCodeSplitVendor: require(
+    './lib/config.code-split-vendors.js'
+  ),
   configDevServer: require(
     './lib/config.dev-server.js'
   ),
@@ -32,6 +35,9 @@ const partials = {
   ),
   loaderSvgFile: require(
     './lib/loader.svg.file.js'
+  ),
+  pluginBundleAnalyzer: require(
+    './lib/plugin.bundle-analyzer.js'
   ),
   pluginClean: require(
     './lib/plugin.clean.js'

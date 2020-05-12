@@ -13,7 +13,6 @@ const ExtractCssChunksPlugin = require(
 )
 
 const config = ({
-  use = [],
   loaderOptions = {},
   pluginOptions = {},
   include,
@@ -31,13 +30,10 @@ const config = ({
             {
               loader: ExtractCssChunksPlugin.loader,
               options: loaderOptions
-            }
+            },
+            'css-loader',
+            'fast-sass-loader'
           ]
-            .concat(use)
-            .concat([
-              'css-loader',
-              'fast-sass-loader'
-            ])
         }
       ]
     },

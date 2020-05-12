@@ -12,7 +12,6 @@ const ExtractCssChunksPlugin = require(
 )
 
 const config = ({
-  use = [],
   loaderOptions = {},
   pluginOptions = {},
   include,
@@ -30,8 +29,9 @@ const config = ({
             {
               loader: ExtractCssChunksPlugin.loader,
               options: loaderOptions
-            }
-          ].concat(use).concat(['css-loader'])
+            },
+            'css-loader'
+          ]
         }
       ]
     },

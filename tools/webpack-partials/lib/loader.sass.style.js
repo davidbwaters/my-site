@@ -10,7 +10,7 @@
 
 const config = ({
   use = [],
-  loaderOptions,
+  loaderOptions = {},
   include,
   exclude
 } = {}) => {
@@ -26,13 +26,10 @@ const config = ({
             {
               loader: 'style-loader',
               options: loaderOptions
-            }
+            },
+            'css-loader',
+            'fast-sass-loader'
           ]
-            .concat(use)
-            .concat([
-              'css-loader',
-              'fast-sass-loader'
-            ])
         }
       ]
     }

@@ -8,7 +8,7 @@
 // css-loader
 
 const config = ({
-  use = ['css-loader'],
+  use = [],
   loaderOptions,
   include,
   exclude
@@ -25,8 +25,9 @@ const config = ({
             {
               loader: 'style-loader',
               options: loaderOptions
-            }
-          ].concat(use)
+            },
+            'css-loader'
+          ]
         }
       ]
     }

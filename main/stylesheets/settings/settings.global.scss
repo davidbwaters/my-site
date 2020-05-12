@@ -1,9 +1,10 @@
-///* ========================================================================
+///* ====================================================
 //   #GLOBAL
-//   ======================================================================== */
+//   ==================================================== */
 
-// The global settings file contains any project-wide variables; things that
-// need to be made available to the entire codebase.
+// The global settings file contains any project-wide 
+// variables; things that need to be made available to the 
+// entire codebase.
 
 
 
@@ -11,3 +12,4 @@
 
 $global-radius: 3px !default;
 $global-transition: all 300ms ease-in-out !default;
+$global-max-width: 1080px;

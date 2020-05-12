@@ -11,12 +11,11 @@ const common = merge.smart(
   {
     context: path.resolve(rootDir, 'main'),
     entry: {
-      main: './index.js'
-
+      main: './main.js'
     },
     output: {
       path: path.resolve(rootDir, 'build'),
-      filename: '[name].[contenthash].js',
+      filename: '[name].[hash].js',
       chunkFilename: '[name].[id].js'
     }
   },
@@ -24,6 +23,7 @@ const common = merge.smart(
   partials.loaderFontsFile(),
   partials.loaderSvgFile(),
   partials.pluginHtml(),
+  partials.pluginBundleAnalyzer,
   partials.pluginClean()
 )
 
@@ -39,7 +39,8 @@ const production = merge.smart(
   partials.dualCssExtractCssChunks(),
   partials.dualSassExtractCssChunks(),
   partials.pluginOptimizeCssAssets(),
-  partials.pluginPurgecss()
+  partials.configCodeSplitVendor()
+  // partials.pluginPurgecss()
 )
 
 module.exports = (env, argv) => {
