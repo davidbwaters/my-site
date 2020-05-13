@@ -751,10 +751,10 @@
     "@davidbwaters/eslint-config" "^1.5.0"
     "@davidbwaters/prettier-config" "^1.1.1"
 
-"@davidbwaters/eslint-config@^1.6.3":
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/@davidbwaters/eslint-config/-/eslint-config-1.6.3.tgz#e1d2ebcf409ef68af17695a7ee41e0fc8dac8004"
-  integrity sha512-D1hKHjiWrDN+wm39GItv7ScOa9Eg/Ekx1guohIaSNbkhH9AbKElAh16IsqTUeWuUYAdApuh9STDuuy5STva1sA==
+"@davidbwaters/eslint-config@^1.6.5":
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/@davidbwaters/eslint-config/-/eslint-config-1.6.5.tgz#f04a40c66a29494266c017670a18b48c46e035be"
+  integrity sha512-XILwcoWpKrZkDVZOQkjfeH0olmklpI16Hn9zEGtuGX8sN55UOxPQjiN8ablPdkmwnrzAQvWp0QEeex+GDNDxlQ==
   dependencies:
     "@davidbwaters/eslint-config" "^1.5.0"
     "@davidbwaters/prettier-config" "^1.1.1"
