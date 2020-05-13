@@ -1,0 +1,17 @@
+/* ======================================================
+   #LINKS
+   ====================================================== */
+
+a {
+  text-decoration: none;
+
+  @if variable-exists(link-color) {
+    color: $link-color;
+  }
+
+  @if variable-exists(link-color-hover) {
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+};
