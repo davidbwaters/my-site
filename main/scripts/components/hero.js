@@ -1,66 +1,27 @@
-import { html, render } from 'lighterhtml'
+///* ====================================================
+//   #HERO
+//   ==================================================== */
 
 customElements
-  .define('dbw-header', class extends HTMLElement {
-
-    constructor() {
-
-      super()
-
-      // Render to node or its shadow root (even closed)
-      this.render = render.bind(
-        null,
-        // used as target node
-        // it could either be the node itself
-        // or its shadow root, even a closed one
-        this,
-        // the update callback
-        this.render.bind(this)
-      )
-
-    }
+  .define('dbw-hero', class extends HTMLElement {
 
     connectedCallback() {
+
+      this.content = this.innerHTML
       this.render()
+
     }
 
     render() {
 
-      this.state = {
-        logo: this.getAttribute('logo'),
-        items: this.getAttribute('items')
-          .split(', ')
-          .map(item => {
+      this.classList.add('c-hero')
 
-            return item.split(': ')
+      const inner = document.createElement('div')
 
-          })
-
-      }
-
-      this.classList.add('c-header')
-
-      return html`
-      
-        <div class="c-header__inner">
-          
-          <img 
-            class="c-header__logo" 
-            src=${this.state.logo}
-          >
-
-          <nav class="c-header__nav">
-            ${this.state.items.map(item => {
-
-               return html`
-                <a href=${item[1]}>${item[0]}</a>`
-              }
-
-            )}
-
-          </nav>
-        </div> 
-        `
+      inner.classList.add('c-hero__inner')
+      inner.innerHTML = this.content
+      this.innerHTML = ''
+      this.appendChild(inner)
 
     }
 
@@ -70,5 +31,5 @@ customElements
 
     }
 
-})
+  })
 

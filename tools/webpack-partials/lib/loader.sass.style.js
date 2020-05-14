@@ -4,9 +4,9 @@
 
 // Dependencies:
 //
-// fast-sass-loader
-// style-loader
 // css-loader
+// sass-loader
+// style-loader
 
 const config = ({
   use = [],
@@ -28,7 +28,7 @@ const config = ({
               options: loaderOptions
             },
             'css-loader',
-            'fast-sass-loader'
+            'sass-loader'
           ]
         }
       ]

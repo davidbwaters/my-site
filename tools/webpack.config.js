@@ -11,7 +11,7 @@ const common = merge.smart(
   {
     context: path.resolve(rootDir, 'main'),
     entry: {
-      main: './main.js'
+      main: './scripts/main.js'
     },
     output: {
       path: path.resolve(rootDir, 'build'),
@@ -22,8 +22,9 @@ const common = merge.smart(
   partials.loaderJsBabel(),
   partials.loaderFontsFile(),
   partials.loaderSvgFile(),
+  partials.loaderVideoFile(),
   partials.pluginHtml(),
-  partials.pluginBundleAnalyzer,
+  partials.pluginBundleAnalyzer(),
   partials.pluginClean()
 )
 
@@ -37,7 +38,7 @@ const development = merge.smart(
 const production = merge.smart(
   partials.loaderImageFile(),
   partials.dualCssExtractCssChunks(),
-  partials.dualSassExtractCssChunks(),
+  partials.dualSassFastSassExtractCssChunks(),
   partials.pluginOptimizeCssAssets(),
   partials.configCodeSplitVendor()
   // partials.pluginPurgecss()

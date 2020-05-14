@@ -5,7 +5,7 @@
 // Dependencies:
 //
 // css-loader
-// fast-sass-loader
+// sass-loader
 // extract-css-chunks-webpack-plugin
 
 const ExtractCssChunksPlugin = require(
@@ -32,7 +32,7 @@ const config = ({
               options: loaderOptions
             },
             'css-loader',
-            'fast-sass-loader'
+            'sass-loader'
           ]
         }
       ]

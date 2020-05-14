@@ -12,8 +12,8 @@ const partials = {
   dualCssExtractCssChunks: require(
     './lib/dual.css.extract-css-chunks.js'
   ),
-  dualSassExtractCssChunks: require(
-    './lib/dual.sass.extract-css-chunks.js'
+  dualSassFastSassExtractCssChunks: require(
+    './lib/dual.sass.fast-sass.extract-css-chunks.js'
   ),
   loaderCssStyle: require(
     './lib/loader.css.style.js'
@@ -30,11 +30,17 @@ const partials = {
   loaderJsBabel: require(
     './lib/loader.js.babel.js'
   ),
+  loaderSassFastSassStyle: require(
+    './lib/loader.sass.fast-sass.style.js'
+  ),
   loaderSassStyle: require(
     './lib/loader.sass.style.js'
   ),
   loaderSvgFile: require(
     './lib/loader.svg.file.js'
+  ),
+  loaderVideoFile: require(
+    './lib/loader.video.file.js'
   ),
   pluginBundleAnalyzer: require(
     './lib/plugin.bundle-analyzer.js'

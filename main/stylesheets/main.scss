@@ -4,14 +4,16 @@
 
 // SETTINGS
 @import 'settings/settings.config';
-@import '../../node_modules/inuitcss/settings/settings.core';
 @import 'settings/settings.global';
 @import 'settings/settings.colors';
+@import 'settings/settings.main';
+@import '../../node_modules/inuitcss/settings/settings.core';
 
 // TOOLS
-@import '../../node_modules/inuitcss/tools/tools.font-size';
 @import '../../node_modules/inuitcss/tools/tools.clearfix';
 @import '../../node_modules/sass-mq/mq';
+@import 'tools/tools.font-size';
+@import 'tools/tools.headings';
 @import 'tools/tools.aliases';
 
 // GENERIC
@@ -20,8 +22,8 @@
 @import '../../node_modules/inuitcss/generic/generic.shared';
 
 // ELEMENTS
-@import '../../node_modules/inuitcss/elements/elements.headings';
 @import '../../node_modules/inuitcss/elements/elements.page';
+@import 'elements/element.heading';
 @import 'elements/element.link';
 @import 'elements/element.page';
 
@@ -33,16 +35,16 @@
 @import '../../node_modules/inuitcss/objects/objects.list-inline';
 @import '../../node_modules/inuitcss/objects/objects.media';
 @import '../../node_modules/inuitcss/objects/objects.table';
-
-$inuit-wrapper-width: $global-max-width;
 @import '../../node_modules/inuitcss/objects/objects.wrapper';
 
 // COMPONENTS
 @import 'components/components.button';
 @import 'components/components.header';
 @import 'components/components.hero';
+@import 'components/components.video-bg';
 
 // UTILITIES
-@import '../../node_modules/inuitcss/utilities/utilities.headings';
 @import '../../node_modules/inuitcss/utilities/utilities.spacings';
 @import '../../node_modules/inuitcss/utilities/utilities.widths';
+@import 'utilities/utilities.headings';
+

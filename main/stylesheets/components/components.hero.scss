@@ -1,39 +1,20 @@
 /* ======================================================
-   #HEADER
+   #HERO
    ====================================================== */
 
-$header-max-width: $global-max-width;
-$header-padding-y: $spacing-unit !default;
-$header-padding-x: $spacing-unit !default;
-$header-transition: $global-transition !default;
-
-.c-header {
-  cursor: pointer;
-  display: block;
-  font: inherit;
-  margin: 0;
-  padding:
-    $header-padding-y $header-padding-x;
-  text-align: center;
-}
-
-.c-header__inner {
-  display: flex;
-  margin: auto;
-  max-width: $header-max-width;
-}
-
-.c-header__logo {
-  height: 36px;
-  width: auto;
-}
-
-.c-header__nav {
-  display: flex;
-  margin-left: auto;
-}
-
-.c-header__link {
+.c-hero {
   align-items: center;
-  display: inline-block;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 }
+
+.c-hero__inner {
+  max-width: 680px;
+  text-align: center;
+  width: 75%;
+}
+
+

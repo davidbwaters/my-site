@@ -11,15 +11,6 @@ $inuit-config: (
   debug: true,
 );
 
-// You can access data in this map using the following 
-// function:
-//
-// inuit-config(<key>)
-//
-// Example usage:
-//
-// @if (inuit-config(debug) == true) { ...  }
-
 @function inuit-config($key) {
   @return map-get($inuit-config, $key);
 }
