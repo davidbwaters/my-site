@@ -1,9 +1,9 @@
 {
-  "name": "davidbwaters.gihub.io",
+  "name": "my-site",
   "version": "1.0.0",
   "description": "my web site",
   "main": "main.js",
-  "repository": "github.com/davidbwaters/davidbwaters.github.io",
+  "repository": "github.com/davidbwaters/my-site",
   "author": "David B. Waters",
   "license": "MIT",
   "private": false,
@@ -41,10 +41,13 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  },
   "scripts": {
     "serve": "webpack-dev-server --mode development --config tools/webpack.config.js",
     "build:dev": "webpack --mode development --config tools/webpack.config.js",
-    "build:prod": "webpack --mode production --config tools/webpack.config.js"
+    "build:prod": "webpack --mode production --config tools/webpack.config.js",
+    "deploy": "gh-pages -d build"
   }
 }

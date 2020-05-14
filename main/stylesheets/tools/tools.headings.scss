@@ -1,0 +1,43 @@
+/* ======================================================
+   #HEADING
+   ====================================================== */
+
+// HEADINGS
+$inuit-font-size-h1:  42px;
+$inuit-font-size-h2:  28px;
+$inuit-font-size-h3:  24px;
+$inuit-font-size-h4:  20px;
+$inuit-font-size-h5:  18px;
+$inuit-font-size-h6:  16px;
+
+$heading-font-weight: 500;
+
+@mixin heading($heading) {
+  font-weight: 400;
+  margin: $spacing-unit 0;
+
+  @if ($heading == "h1") {
+    @include font-size($inuit-font-size-h1);
+  }
+
+  @if ($heading == "h2") {
+    @include font-size($inuit-font-size-h2);
+  }
+
+  @if ($heading == "h3") {
+    @include font-size($inuit-font-size-h3);
+  }
+
+  @if ($heading == "h4") {
+    @include font-size($inuit-font-size-h4);
+  }
+
+  @if ($heading == "h5") {
+    @include font-size($inuit-font-size-h5);
+  }
+
+  @if ($heading == "h6") {
+    @include font-size($inuit-font-size-h6);
+  }
+  
+};

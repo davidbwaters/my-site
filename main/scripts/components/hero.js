@@ -16,6 +16,12 @@ customElements
 
       this.classList.add('c-hero')
 
+      if (this.hasAttribute('sauce')) {
+
+        this.classList.add('c-hero--sauce')
+
+      }
+
       const inner = document.createElement('div')
 
       inner.classList.add('c-hero__inner')
@@ -32,4 +38,3 @@ customElements
     }
 
   })
-

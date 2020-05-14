@@ -1,0 +1,19 @@
+/* ======================================================
+   #VIDEO-BG
+   ====================================================== */
+
+.c-video-bg {
+  display: block;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.c-video-bg__video {
+  position: relative;
+  top: -20%;
+  width: 100%;
+}
+
+
