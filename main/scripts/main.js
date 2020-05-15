@@ -9,13 +9,13 @@ import './components/video-bg'
 import '../stylesheets/main.scss'
 
 import logo from '../images/logo-black.png'
-import video from '../videos/growth.mp4'
+import video from '../videos/growth.webm'
 
 document.body.appendChild(
   html.node`
-    <dbw-video-bg opaque source=${video} type="video/mp4">
+    <dbw-video-bg opaque source=${video} type="video/webm">
     </dbw-video-bg>
-    <dbw-hero>
+    <dbw-hero sauce>
       <dbw-header logo="${logo}" items="About: /about">
       </dbw-header>
       <h1>

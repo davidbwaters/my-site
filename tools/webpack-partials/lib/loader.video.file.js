@@ -14,7 +14,7 @@ const config = (
     module: {
       rules: [
         {
-          test: /\.(mp4|ogg)$/,
+          test: /\.(mp4|ogg|webm)$/,
           include,
           exclude,
           use: [

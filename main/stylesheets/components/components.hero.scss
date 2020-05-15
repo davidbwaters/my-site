@@ -25,5 +25,13 @@
    ====================================================================== */
 
 .c-hero--sauce {
-  
+  &:before {
+
+    color: #97CAC5;
+    content: 'SAUCE';
+    font-size: 10vw;
+    font-weight: 700;
+    position: absolute;
+
+  }
 }

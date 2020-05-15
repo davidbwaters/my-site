@@ -2,12 +2,17 @@
 //   #HERO
 //   ==================================================== */
 
+import { html, render } from 'lighterhtml'
+
 customElements
   .define('dbw-hero', class extends HTMLElement {
 
     connectedCallback() {
 
-      this.content = this.innerHTML
+      this.state = {
+        content: this.innerHTML
+      }
+
       this.render()
 
     }
@@ -18,16 +23,15 @@ customElements
 
       if (this.hasAttribute('sauce')) {
 
-        this.classList.add('c-hero--sauce')
+        this.innerHTML = 
+          '<span class="c-hero__text-bg">SAUCE</span>'
 
       }
 
       const inner = document.createElement('div')
-
-      inner.classList.add('c-hero__inner')
-      inner.innerHTML = this.content
-      this.innerHTML = ''
+      inner.innerHTML = this.state.content
       this.appendChild(inner)
+
 
     }
 

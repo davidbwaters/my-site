@@ -14,18 +14,21 @@ const common = merge.smart(
       main: './scripts/main.js'
     },
     output: {
-      path: path.resolve(rootDir, 'build'),
       filename: '[name].[hash].js',
-      chunkFilename: '[name].[id].js'
+      chunkFilename: '[name].[id].js',
+      path: path.resolve(rootDir, 'build')
     }
   },
   partials.loaderJsBabel(),
   partials.loaderFontsFile(),
   partials.loaderSvgFile(),
   partials.loaderVideoFile(),
-  partials.pluginHtml(),
-  partials.pluginBundleAnalyzer(),
-  partials.pluginClean()
+  partials.pluginHtml({
+    favicon: path.resolve(
+      rootDir, 'main/images/favicon.png'
+    )
+  }),
+  partials.pluginBundleAnalyzer()
 )
 
 const development = merge.smart(
@@ -36,11 +39,13 @@ const development = merge.smart(
 )
 
 const production = merge.smart(
+  partials.configCodeSplitVendor(),
   partials.loaderImageFile(),
+  partials.pluginClean(),
   partials.dualCssExtractCssChunks(),
   partials.dualSassFastSassExtractCssChunks(),
-  partials.pluginOptimizeCssAssets(),
-  partials.configCodeSplitVendor()
+  partials.pluginOptimizeCssAssets()
+
   // partials.pluginPurgecss()
 )
 

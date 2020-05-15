@@ -9,7 +9,6 @@
 // style-loader
 
 const config = ({
-  use = [],
   loaderOptions = {},
   include,
   exclude

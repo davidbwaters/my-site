@@ -46,8 +46,7 @@
   },
   "scripts": {
     "serve": "webpack-dev-server --mode development --config tools/webpack.config.js",
-    "build:dev": "webpack --mode development --config tools/webpack.config.js",
-    "build:prod": "webpack --mode production --config tools/webpack.config.js",
-    "deploy": "gh-pages -d build"
+    "build": "webpack --mode production --config tools/webpack.config.js",
+    "deploy": "gh-pages -d build -r https://github.com/davidbwaters/my-site.git -b gh-pages"
   }
 }
