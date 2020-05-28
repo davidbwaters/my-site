@@ -43,9 +43,8 @@ const production = merge.smart(
   partials.loaderImageFile(),
   partials.pluginClean(),
   partials.dualCssExtractCssChunks(),
-  partials.dualSassFastSassExtractCssChunks(),
+  partials.dualSassExtractCssChunks(),
   partials.pluginOptimizeCssAssets()
-
   // partials.pluginPurgecss()
 )
 

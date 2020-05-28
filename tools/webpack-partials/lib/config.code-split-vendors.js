@@ -2,20 +2,14 @@
 //   #CONFIG - CODE-SPLIT-VENDORS
 //   ==================================================== */
 
-// Dependencies:
-//
-// webpack-dev-server
-
 const config = (options) => {
 
   return {
-    devServer: Object.assign({
-      stats: 'errors-only',
-      host: process.env.HOST,
-      port: process.env.PORT,
-      overlay: true,
-      hot: true
-    }, options)
+    optimization: {
+      splitChunks: {
+        chunks: "initial",
+      }
+    }
   }
 
 }
