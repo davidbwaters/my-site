@@ -4,6 +4,7 @@
 
 // Dependencies:
 //
+// sass
 // css-loader
 // sass-loader
 // extract-css-chunks-webpack-plugin

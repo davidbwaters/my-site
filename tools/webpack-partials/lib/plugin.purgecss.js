@@ -6,9 +6,8 @@
 
 // Dependencies:
 //
-// app-root-di
+// app-root-dir
 // glob-all
-// extract-css-chunks-webpack-plugin
 // purgecss-webpack-plugin
 
 const path = require('path')

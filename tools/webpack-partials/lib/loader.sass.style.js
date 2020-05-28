@@ -4,6 +4,7 @@
 
 // Dependencies:
 //
+// sass
 // css-loader
 // sass-loader
 // style-loader

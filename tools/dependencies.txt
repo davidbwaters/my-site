@@ -1,0 +1,1 @@
+webpack webpack-cli webpack-merge webpack-dev-server css-loader extract-css-chunks-webpack-plugin sass-loader sass style-loader file-loader url-loader babel-loader @babel/core @babel/preset-env webpack-merge app-root-dir glob-all purgecss-webpack-plugin html-webpack-plugin optimize-css-assets-webpack-plugin cssnano webpack-bundle-analyzer clean-webpack-plugin 
