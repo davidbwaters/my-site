@@ -6,10 +6,7 @@
 
 // Dependencies:
 //
-// webpack-merge
 // cssnano
-// css-loader
-// extract-css-chunks-webpack-plugin
 // optimize-css-assets-webpack-plugin
 
 const OptimizeCssAssetsPlugin = require(
