@@ -8,6 +8,7 @@ $header-padding-x: $spacing-unit !default;
 $header-transition: $global-transition !default;
 
 .c-header {
+  color: white;
   display: block;
   font: inherit;
   left: 0;
@@ -19,6 +20,7 @@ $header-transition: $global-transition !default;
   text-align: center;
   top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 .c-header__inner {
@@ -40,5 +42,6 @@ $header-transition: $global-transition !default;
 
 .c-header__link {
   align-items: center;
+  color: inherit;
   display: inline-block;
 }

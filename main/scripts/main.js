@@ -8,20 +8,21 @@ import './components/hero'
 import './components/video-bg'
 import '../stylesheets/main.scss'
 
-import logo from '../images/logo-black.png'
+import logo from '../images/logo-white.png'
 import growthMp4 from '../videos/growth.mp4'
 import growthWebm from '../videos/growth.webm'
 
 document.body.appendChild(
   html.node`
-    <dbw-video-bg opaque mp4=${videoMp4} type="video/webm">
-    </dbw-video-bg>
+    <dbw-header logo="${logo}" items="Contact: /about">
+    </dbw-header>
     <dbw-hero sauce>
-      <dbw-header logo="${logo}" items="About: /about">
-      </dbw-header>
-      <h1>
+
+      <h1 class="inner">
         I create digital solutions to promote growth.
       </h2>
+      <dbw-video-bg mp4=${growthMp4} webm=${growthWebm}>
+      </dbw-video-bg>
     </dbw-hero>
   `
 )

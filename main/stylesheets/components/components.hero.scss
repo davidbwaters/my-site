@@ -12,26 +12,9 @@
 }
 
 .c-hero__inner {
+  color: white;
   max-width: 600px;
-  text-align: center;
+  position: relative;
+  // text-align: center;
   width: 75%;
-}
-
-
-
-
-
-/* Variants
-   ====================================================================== */
-
-.c-hero--sauce {
-  &:before {
-
-    color: #97CAC5;
-    content: 'SAUCE';
-    font-size: 10vw;
-    font-weight: 700;
-    position: absolute;
-
-  }
 }

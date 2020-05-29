@@ -28,8 +28,8 @@ customElements
     render() {
 
       this.state = {
-        video: this.getAttribute('mp4'),
-        type: this.getAttribute('webm')
+        mp4: this.getAttribute('mp4'),
+        webm: this.getAttribute('webm')
       }
       if (this.hasAttribute('opaque')) {
         this.style.opacity = '.6'

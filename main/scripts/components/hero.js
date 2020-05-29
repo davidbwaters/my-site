@@ -13,13 +13,15 @@ customElements
 
     render() {
 
-      const template = document.createElement('template')
-      const inner = document.createElement('div')
-      
-      inner.appendChild(this.cloneNode)
-      template.appendChild(inner)
-      this.appendChild(template)
-    
+      const inner = this.querySelector('.inner')
+      const innerDiv = document.createElement('div')
+
+      innerDiv.classList.add('c-hero__inner')
+      innerDiv.appendChild(inner)
+
+      this.classList.add('c-hero')
+      this.appendChild(innerDiv)
+
     }
 
   })
