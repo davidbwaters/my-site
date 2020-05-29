@@ -28,28 +28,26 @@ customElements
     render() {
 
       this.state = {
-        video: this.getAttribute('source'),
-        type: this.getAttribute('type')
+        video: this.getAttribute('mp4'),
+        type: this.getAttribute('webm')
       }
       if (this.hasAttribute('opaque')) {
-        this.style.opacity = '.2'
+        this.style.opacity = '.6'
       }
       this.classList.add('c-video-bg')
 
       return html`
-        <video autoplay loop class="c-video-bg__video">
-          <source 
-            src="${this.state.video}" 
-            type="${this.state.type}"
+        <video autoplay muted loop class="c-video-bg__video">
+          <source
+            src="${this.state.mp4}" 
+            type="video/mp4"
+          >
+          <source
+            src="${this.state.webm}" 
+            type="video/webm"
           >
         </video>
         `
-
-    }
-
-    handleEvent(event) {
-
-      this[`on${event.type} `](event)
 
     }
 
