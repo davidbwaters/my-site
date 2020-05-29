@@ -13,10 +13,13 @@ customElements
 
     render() {
 
+      const template = document.createElement('template')
       const inner = document.createElement('div')
-      inner.innerHTML = this.state.content
-      this.appendChild(inner)
-
+      
+      inner.appendChild(this.cloneNode)
+      template.appendChild(inner)
+      this.appendChild(template)
+    
     }
 
   })
