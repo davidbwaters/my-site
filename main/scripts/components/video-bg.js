@@ -2,42 +2,50 @@
 //   #VIDEO-BG
 //   ==================================================== */
 
-import { html, render } from 'lighterhtml'
-
 customElements
   .define('dbw-video-bg', class extends HTMLElement {
 
-    constructor() {
-
-      super()
-
-      this.render = render.bind(
-        null,
-        this,
-        this.render.bind(this)
-      )
-
-    }
-
     connectedCallback() {
 
+      this.state = {}
       this.render()
 
     }
 
     render() {
 
-      this.state = {
-        mp4: this.getAttribute('mp4'),
-        webm: this.getAttribute('webm')
-      }
-      if (this.hasAttribute('opaque')) {
-        this.style.opacity = '.6'
-      }
-      this.classList.add('c-video-bg')
+      const video = this.querySelector('video')
 
-      return html`
-        <video autoplay muted loop class="c-video-bg__video">
+      this.classList.add('c-video-bg')      
+
+      if (this.hasAttribute('mp4')) {
+        this.state.mp4 = this.getAttribute('mp4')
+      }
+
+      if (this.hasAttribute('webm')) {
+        this.state.mp4 = this.getAttribute('webm')
+      }
+
+      if (this.hasAttribute('opaque')) {
+        this.style.opacity = '.5'
+      }
+      
+      if (this.hasAttribute('blur')) {
+        video.style.filter = 'blur(3px)'
+      }
+
+      this.state.noise = this.hasAttribute('noise')
+        ? '' 
+        : 'style="visibility: hidden"'
+
+      this.innerHTML = `
+        <video 
+          autoplay 
+          muted 
+          loop 
+          class="c-video-bg__video"
+          ${this.state.blur}
+        >
           <source
             src="${this.state.mp4}" 
             type="video/mp4"
@@ -47,7 +55,36 @@ customElements
             type="video/webm"
           >
         </video>
-        `
+        <svg
+          ${this.state.noise}
+          height="100%"
+          width="100%"
+          style="
+            mix-blend-mode: difference;
+            opacity: .2;
+            position: relative;
+          "
+        >
+          <filter 
+            id='noise'
+            x='0%' 
+            y='0%' 
+            width='100%' 
+            height='100%'
+          >
+            <feTurbulence 
+              type="fractalNoise" 
+              baseFrequency="0.8"
+              numOctaves="0.1"
+            />
+          </filter>
+          <rect 
+            filter="url(#noise)"
+            width='100%' 
+            height='100%'
+          />
+        </svg>
+      `
 
     }
 

@@ -7,6 +7,7 @@
 // babel-loader
 // @babel/core
 // @babel/preset-env
+// babel-plugin-syntax-dynamic-import
 
 const config = ({
   use = [],
@@ -15,24 +16,26 @@ const config = ({
   exclude
 } = {}) => {
 
+  const excludeAll = exclude
+    ? ['/node_modules/'].concat(exclude)
+    : ['/node_modules/']
+    
   return {
     module: {
       rules: [
         {
           test: /\.m?js$/,
           include,
-          exclude,
+          exclude: excludeAll,
           use: [
             {
               loader: 'babel-loader',
               options: Object.assign(loaderOptions, {
                 presets: [
-                  [
-                    '@babel/preset-env',
-                    {
-                      'modules': false
-                    }
-                  ]
+                  '@babel/preset-env'
+                ],
+                plugins: [
+                  'babel-plugin-syntax-dynamic-import'
                 ]
               })
             }

@@ -16,7 +16,8 @@ const common = merge.smart(
     output: {
       filename: '[name].[hash].js',
       chunkFilename: '[name].[id].js',
-      path: path.resolve(rootDir, 'build')
+      path: path.resolve(rootDir, 'build'),
+      publicPath: ''
     }
   },
   partials.loaderJsBabel(),
@@ -39,7 +40,7 @@ const development = merge.smart(
 )
 
 const production = merge.smart(
-  partials.configCodeSplitVendor(),
+  partials.configSplitChunks(),
   partials.loaderImageFile(),
   partials.pluginClean(),
   partials.dualCssExtractCssChunks(),

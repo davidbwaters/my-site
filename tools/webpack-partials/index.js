@@ -3,8 +3,8 @@
 //   ==================================================== */
 
 const partials = {
-  configCodeSplitVendor: require(
-    './lib/config.code-split-vendors.js'
+  configSplitChunks: require(
+    './lib/config.split-chunks.js'
   ),
   configDevServer: require(
     './lib/config.dev-server.js'

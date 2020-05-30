@@ -44,4 +44,8 @@ $header-transition: $global-transition !default;
   align-items: center;
   color: inherit;
   display: inline-block;
+
+  &:hover {
+    color: inherit;
+  }
 }

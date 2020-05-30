@@ -21,7 +21,7 @@ const config = (
             {
               loader: 'file-loader',
               options: Object.assign(
-                { name: '[path][name].[hash].[ext]' },
+                { name: '[path][name].[ext]' },
                 loaderOptions
               )
             }

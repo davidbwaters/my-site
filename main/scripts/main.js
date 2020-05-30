@@ -9,8 +9,17 @@ import './components/video-bg'
 import '../stylesheets/main.scss'
 
 import logo from '../images/logo-white.png'
-import growthMp4 from '../videos/growth.mp4'
-import growthWebm from '../videos/growth.webm'
+
+// import growthMp4 from '../videos/growth.mp4'
+// import growthWebm from '../videos/growth.webm'
+
+import(
+  /* 
+    webpackPrefetch: true,
+    webpackChunkName: 'growth'
+  */ 
+   '../videos/growth.mp4'
+)
 
 document.body.appendChild(
   html.node`
@@ -21,7 +30,7 @@ document.body.appendChild(
       <h1 class="inner">
         I create digital solutions to promote growth.
       </h2>
-      <dbw-video-bg mp4=${growthMp4} webm=${growthWebm}>
+      <dbw-video-bg noise blur mp4='../videos/growth.mp4'>
       </dbw-video-bg>
     </dbw-hero>
   `

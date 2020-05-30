@@ -64,11 +64,5 @@ customElements.define(
 
     }
 
-    handleEvent(event) {
-
-      this[`on${event.type} `](event)
-
-    }
-
   }
 )
