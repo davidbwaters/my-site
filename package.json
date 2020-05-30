@@ -47,8 +47,8 @@
   },
   "scripts": {
     "serve": "webpack-dev-server --mode development --config tools/webpack.config.js",
+    "deploy": "yarn build && yarn gh-pages",
     "build": "webpack --mode production --config tools/webpack.config.js",
-    "push": "gh-pages -d build -r https://github.com/davidbwaters/my-site.git -b gh-pages",
-    "deploy": "yarn build && yarn deploy"
+    "gh-pages": "gh-pages -d build -r https://github.com/davidbwaters/my-site.git -b gh-pages"
   }
 }
