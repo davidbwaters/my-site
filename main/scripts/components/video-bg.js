@@ -2,6 +2,8 @@
 //   #VIDEO-BG
 //   ==================================================== */
 
+import formfactor from 'platform-detect'
+
 customElements
   .define('dbw-video-bg', class extends HTMLElement {
 
@@ -41,6 +43,11 @@ customElements
       this.state.noise = this.hasAttribute('noise')
         ? '' 
         : 'style="visibility: hidden"'
+
+
+      if (formfactor !== 'phone' || 'tablet') {
+
+      }
 
       this.innerHTML = `
         <video 

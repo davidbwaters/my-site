@@ -18,7 +18,6 @@
     "css-loader": "^3.5.3",
     "eslint": "^7.0.0",
     "extract-css-chunks-webpack-plugin": "^4.7.4",
-    "fast-sass-loader": "^1.5.0",
     "file-loader": "^6.0.0",
     "glob-all": "^3.2.1",
     "html-webpack-plugin": "^4.3.0",
@@ -31,7 +30,7 @@
     "prettier": "^2.0.5",
     "prettier-eslint": "^9.0.1",
     "purgecss-webpack-plugin": "^2.2.0",
-    "sass": "^4.14.1",
+    "sass": "^1.26.7",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
@@ -43,7 +42,8 @@
   },
   "dependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "platform-detect": "^3.0.0"
   },
   "scripts": {
     "serve": "webpack-dev-server --mode development --config tools/webpack.config.js",
