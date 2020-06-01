@@ -15,9 +15,17 @@ const common = merge.smart(
     },
     output: {
       filename: '[name].[hash].js',
-      chunkFilename: '[name].[id].js',
+      chunkFilename: '[name].[chunkHash].js',
       path: path.resolve(rootDir, 'build'),
       publicPath: ''
+    },
+    resolve: {
+      alias: {
+        Images: path.resolve(rootDir, 'main/images/'),
+        Scripts: path.resolve(rootDir, 'main/scripts/'),
+        Stylesheets: path.resolve(rootDir, 'main/stylesheets/'),
+        Videos: path.resolve(rootDir, 'main/videos/')
+      }
     }
   },
   partials.loaderJsBabel(),

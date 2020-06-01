@@ -8,25 +8,18 @@ $header-padding-x: $spacing-unit !default;
 $header-transition: $global-transition !default;
 
 .c-header {
+  align-items: center;
   color: white;
-  display: block;
-  font: inherit;
+  display: flex;
+  justify-content: space-between;
   left: 0;
-  margin: 0;
   padding:
     $header-padding-y $header-padding-x;
   position: absolute;
-  right: 0;
-  text-align: center;
   top: 0;
+  transition: $header-transition;
   width: 100%;
   z-index: 2;
-}
-
-.c-header__inner {
-  display: flex;
-  margin: auto;
-  max-width: $header-max-width;
 }
 
 .c-header__logo {
@@ -34,16 +27,13 @@ $header-transition: $global-transition !default;
   width: auto;
 }
 
-.c-header__nav {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
+// .c-header__nav {}
 
 .c-header__link {
   align-items: center;
   color: inherit;
   display: inline-block;
+  margin-left: $spacing-unit-small;
 
   &:hover {
     color: inherit;

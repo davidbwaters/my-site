@@ -22,44 +22,53 @@ customElements.define(
 
     connectedCallback() {
 
-      this.render()
+
+
+      this.state = {
+        logo: this.getAttribute('logo'),
+        items: this.getAttribute('items')
+          .replace(/ /g, '')
+          .replace(/\n/g, '')
+          .split(',')
+          .map((item) => {
+
+            return item
+              .replace(':', ',')
+              .replace(/\'/g, '')
+              .split(',')
+          })
+      }
+
+      this.render()      
 
     }
 
     render() {
 
-      this.state = {
-        logo: this.getAttribute('logo'),
-        items: this.getAttribute('items')
-          .split(', ')
-          .map((item) => {
-
-            return item.split(': ')
-
-          })
-      }
-
+      console.log(this.state.items)
       this.classList.add('c-header')
 
       return html`
-        <div class="c-header__inner">
-          <img
-            class="c-header__logo"
-            src=${this.state.logo}
-          />
 
-          <nav class="c-header__nav">
-            ${this.state.items.map((item) => {
-
-              return html` 
+        <img
+          class="c-header__logo"
+          src=${this.state.logo}
+        />
+        ${this.innerText}
+        <nav class="c-header__nav">
+          ${
+              this.state.items.map((item) => {
+              
+              return html`
                 <a
                   class="c-header__link"
                   href=${item[1]}
                   >${item[0]}
-                </a>`
-            })}
-          </nav>
-        </div>
+                </a>
+              `
+            })
+          }
+        </nav>
       `
 
     }

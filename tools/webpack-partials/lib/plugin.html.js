@@ -19,6 +19,11 @@ const config = (pluginOptions = {}) => {
       new HTMLWebpackPlugin(
         Object.assign(
           {
+            meta: {
+              viewport: 
+                'width=device-width, initial-scale=1'
+            },
+            scriptLoading: 'defer',
             template: path.resolve(
               rootDir, 'main/templates/index.html'
             )
