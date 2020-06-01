@@ -42,7 +42,7 @@ document.body.appendChild(
         <img src="${squigle}" width="68px" height="7px"/>
         <br/>
         <h2 class="u-h4">
-          My name is David B. Waters
+          My name is David B. Waters.
         </h2>
       </div>
       <dbw-video-bg noise blur mp4='videos/growth.mp4'>
