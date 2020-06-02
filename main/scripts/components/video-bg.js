@@ -16,54 +16,9 @@ customElements
 
     render() {
 
-      this.classList.add('c-video-bg')      
-
-      if (this.hasAttribute('mp4')) {
-        this.state.mp4 = `
-          <source 
-            src=${this.getAttribute('mp4')} 
-            type="video/mp4"
-          >
-        `
-      }
-
-      if (this.hasAttribute('mp4')) {
-        this.state.mp4 = `
-          <source 
-            src=${this.getAttribute('mp4')} 
-            type="video/webm"
-          >
-        `
-      }
-
-      if (this.hasAttribute('opaque')) {
-        this.style.opacity = '.5'
-      }
-      
-      this.state.noise = this.hasAttribute('noise')
-        ? '' 
-        : 'style="visibility: hidden"'
-
-
-      if (formfactor !== 'phone' || 'tablet') {
-
-      }
-
-      this.innerHTML = `
-        <video 
-          autoplay 
-          muted 
-          loop 
-          class="c-video-bg__video"
-          ${this.state.blur}
-        >
-
-        ${this.state.mp4}
-        ${this.state.webm}
-
-        </video>
+      const video = this.querySelector('video')
+      const noise = `
         <svg
-          ${this.state.noise}
           height="100%"
           width="100%"
           style="
@@ -93,12 +48,30 @@ customElements
         </svg>
       `
 
-      const video = this.querySelector('video')
+      this.classList.add('c-video-bg')
+      video.classList.add('c-video-bg__video')
+
+      video.setAttribute('autoplay', '')
+      video.setAttribute('muted', '')
+      video.setAttribute('loop', '')
+
+      if (this.hasAttribute('opaque')) {
+        this.style.opacity = '.5'
+      }
 
       if (this.hasAttribute('blur')) {
         video.style.filter = 'blur(3px)'
       }
-      
+
+      if (this.hasAttribute('noise')) {
+        this.innerHTML += noise
+      }
+
+      if (this.hasAttribute('banner')) {
+        this.style.backgroundImage = this
+          .getAttribute(banner)
+      }
+
     }
 
   })
