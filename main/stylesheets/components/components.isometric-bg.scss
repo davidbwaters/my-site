@@ -1,0 +1,120 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+.c-btn {
+  @include font-size(16px);
+  background: white;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;  
+  letter-spacing: .0125em;
+  overflow: hidden;
+  padding: 
+    inuit-rem($spacing-unit-small)
+    inuit-rem($spacing-unit);
+  position: relative;    
+  text-align: center;
+  transition: 
+    box-shadow .05s,
+    background $global-transition,
+    border-radius $global-transition,
+    transform $global-transition;
+
+  &:before,
+  &:after {
+    bottom: 0;    
+    content: '';
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &:before {
+    width: 100%;
+  }
+
+  &:after {
+    background: currentColor;    
+    bottom: 0;    
+    content: '';
+    left: 0;
+    opacity: .1;    
+    position: absolute;
+    top: 0;
+    transition: all .66s;    
+    transform: translateX(-120%)  skewX(-20deg);
+    width: 10%;
+  }
+
+  &:hover {
+    //color: $color-royal-light;    
+    transform: scale(1.025);
+
+    &:after {
+      background: currentColor;
+      opacity: .1;      
+      transform: translateX(1200%) skewX(-30deg);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(.95);
+  }
+
+  &.is-alerted {
+    background: $status-color-alert;    
+    color: black;
+  }
+
+  &.is-successful {
+    background: $status-color-success;    
+    color: white;
+    text-shadow: 0 1px 1px rgba(black,.75);
+  }
+
+}
+
+.c-btn__icon {
+  display: inline-block;
+  height: $global-line-height;  
+  margin-left: $spacing-unit-small;
+  vertical-align: top;
+
+  > * {
+    fill: currentColor;
+    height: 100%;
+    width: auto;
+  }
+}
+
+
+
+
+
+/* Variants
+   ====================================================================== */
+
+.c-btn--large {
+  @include font-size(18px, 1.4);
+}
+
+.c-btn--ghost {
+  background: rgba(#666,.1);
+  box-shadow:
+    inset 0 0 0 inuit-rem(2px) currentColor,
+    0px 2px 20px 0px rgba(black, 0.1);
+  color: inherit;
+
+  &:hover {
+    box-shadow:
+      inset 0 0 0 inuit-rem(2px) currentColor,
+      0px 2px 20px 0px rgba(black, 0.2);
+    }
+    color: inherit;
+}
