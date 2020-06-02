@@ -38,7 +38,15 @@ const config = ({
         }
       ]
     },
-    plugins: [new ExtractCssChunksPlugin(pluginOptions)]
+    plugins: [new ExtractCssChunksPlugin(
+      Object.assign(
+        {
+          filename: '[name].[hash].css',
+          chunkFileName: '[id].[hash].css' 
+        },
+        pluginOptions
+      )
+    )]
   }
 
 }

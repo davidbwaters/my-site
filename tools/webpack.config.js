@@ -16,7 +16,7 @@ const common = merge.smart(
     output: {
       path: path.resolve(rootDir, 'build'),
       filename: '[name].[hash].js',
-      publicPath: '/'
+      publicPath: ''
     }
   },
   partials.loaderJsBabel(),
@@ -53,5 +53,4 @@ module.exports = (env, argv) => {
   return argv.mode && argv.mode === 'production'
     ? merge.smart(common, production)
     : merge.smart(common, development)
-
 }
