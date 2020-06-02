@@ -14,6 +14,8 @@ const common = merge.smart(
       main: './scripts/main.js'
     },
     output: {
+      path: path.resolve(rootDir, 'build'),
+      filename: '[name].[hash].js',
       publicPath: '/'
     }
   },
