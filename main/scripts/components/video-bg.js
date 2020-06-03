@@ -68,8 +68,8 @@ customElements
       }
 
       if (this.hasAttribute('banner')) {
-        this.style.backgroundImage = this
-          .getAttribute(banner)
+        const banner = this.getAttribute('banner')
+        this.style.backgroundImage = 'url(' + banner + ')'
       }
 
     }

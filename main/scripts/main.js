@@ -13,6 +13,7 @@ import squigle from '../images/squigle-white.svg'
 
 import growthMp4 from '../videos/growth.mp4'
 import growthWebm from '../videos/growth.webm'
+import growthBanner from '../images/growth-bg.jpg'
 
 console.log(logo)
 console.log(growthMp4)
@@ -26,7 +27,7 @@ document.body.innerHTML = `
     "
   >
   </dbw-header>
-  <dbw-hero sauce>
+  <dbw-hero>
 
     <div class="inner">
       <h1>
@@ -41,7 +42,7 @@ document.body.innerHTML = `
       </h2>
     </div>
 
-    <dbw-video-bg noise blur>
+    <dbw-video-bg noise blur banner=${growthBanner}>
       <video>
         <source src="${growthMp4}" type="video/mp4"/>
         <source src="${growthWebm}" type="video/webm"/>
@@ -49,4 +50,16 @@ document.body.innerHTML = `
     </dbw-video-bg>
     
   </dbw-hero>
+
+  <section class="o-box o-box--large">
+    <span class="c-isometric-bg">
+      <div class="inner">
+        <h2>Skills</h2>
+        <ul>
+          <li>
+        </ul>
+      </div>
+      <span class="c-isometric-bg__geometry"></span>
+    </span>
+  </div>
 `

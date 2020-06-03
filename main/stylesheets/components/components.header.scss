@@ -2,11 +2,6 @@
    #HEADER
    ====================================================== */
 
-$header-max-width: $global-max-width;
-$header-padding-y: $spacing-unit !default;
-$header-padding-x: $spacing-unit !default;
-$header-transition: $global-transition !default;
-
 .c-header {
   align-items: center;
   color: white;
@@ -14,10 +9,10 @@ $header-transition: $global-transition !default;
   justify-content: space-between;
   left: 0;
   padding:
-    $header-padding-y $header-padding-x;
+    $spacing-unit;
   position: absolute;
   top: 0;
-  transition: $header-transition;
+  transition: $global-transition;
   width: 100%;
   z-index: 2;
 }
